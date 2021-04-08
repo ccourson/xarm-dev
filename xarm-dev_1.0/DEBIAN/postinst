@@ -1,0 +1,4 @@
+#!/bin/sh
+# DEBIAN/postinst
+
+udevadm control --reload-rules

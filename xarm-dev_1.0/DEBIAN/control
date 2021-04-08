@@ -1,0 +1,6 @@
+Package: myapp
+Version: 1.0
+Maintainer: Chris Courson <chris@chrisbot.com>
+Architecture: all
+Description: A description that can span multiple lines. Each additional
+ line should start with a space.
