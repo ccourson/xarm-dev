@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# Exit on error
+set -e
+
+# Get command line arguments
+if [[ $2 ]]
+then
+    echo "Too many args"
+    exit 1
+fi
+
+case $1 in
+
+    init)
+        echo "Initializing xArm Python project..."
+        python3 -m venv env
+        source env/bin/activate
+        pip3 install --upgrade setuptools
+        pip3 install hidapi
+        echo "Project ready."
+    ;;
+
+    --version)
+        echo "xarm-dev version 0.1-ubuntu"
+    ;;
+
+    * | --help)
+        err=0
+        if [[ $1 ]]
+        then
+            echo "Bad or missing argument."
+            err = 1
+        fi
+        echo "usage: xarm-dev [--version] [--help] <command> <[args]>"
+        echo ""
+        echo "xarm-dev commands:"
+        echo ""
+        echo "   init              Initialize a project folder. Activate a virtual"
+        echo "                     Python environment, upgrade setuptools and install"
+        echo "                     hidapi package into virtual environment site packages."
+        exit $err
+    ;;
+esac

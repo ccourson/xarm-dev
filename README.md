@@ -42,6 +42,7 @@ Create package
 Install package
 
 	dpkg -i myapp_1.0.deb
+	apt install ./myapp_1.0.deb
 	
 Other commands
 
