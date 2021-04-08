@@ -19,7 +19,7 @@ Also installed is command xarm-dev.
 
 usage: xarm-dev [--version] [--help] <command> <[args]>
 
-## xarm-dev commands:
+xarm-dev commands:
 
 **init:**
 
